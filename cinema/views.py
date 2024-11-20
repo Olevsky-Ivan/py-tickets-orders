@@ -71,6 +71,7 @@ class MovieViewSet(viewsets.ModelViewSet):
             return queryset.prefetch_related("actors", "genres")
         return queryset
 
+
 class MovieSessionViewSet(viewsets.ModelViewSet):
     queryset = MovieSession.objects.all()
     serializer_class = MovieSessionSerializer
